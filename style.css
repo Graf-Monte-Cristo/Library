@@ -40,7 +40,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px;
+    gap: 40%;
 }
 h1{
     font-family: 'arima_koshibold', 'Courier New', Courier, monospace;
@@ -66,7 +66,7 @@ h2{
     padding-left: 1%;
     align-items: center;
     height: 5vh;
-    width: 10vw;
+    width: 300px;
     border: 1px solid white;
     background-color: lightblue;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
