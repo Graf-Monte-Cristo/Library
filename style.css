@@ -62,27 +62,30 @@ h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     justify-content: center;
+    font-size: larger;
+    padding-left: 1%;
     align-items: center;
     height: 5vh;
     width: 10vw;
     border: 1px solid white;
     background-color: lightblue;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    gap: 20%;
 }
 .container{
     width: 100vw;
     height: 70vh;
     background-color:bisque;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 16px; /* отступы между карточками по горизонтали и вертикали */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1%; /* отступы между карточками по горизонтали и вертикали */
     padding: 16px;
 }
 #popup{
     background-color: #eee;
     position: fixed;
-    width: 13%;
-    height: 30%;
+    width: 15%;
+    height: fit-content;
     text-align: center;
     top: 25%;
     left: 50%;
@@ -173,11 +176,24 @@ button[type="button"]:hover{
     background-color: red;
     color: whitesmoke;
 }
+.container-button{
+    width: 90%;
+    border: 1px solid whitesmoke;
+    border-radius: 15px;    
+    margin: 3%;
+}
+.read:hover{
+    border: 2px solid green;
+}
+.remove:hover{
+    border: 2px solid red;
+}
+
 
 
 
 #plus{
-    fill: rgb(120, 211, 247);
+    fill: rgb(255, 255, 255);
 }
 .icon{
     width: 50px;
@@ -203,9 +219,10 @@ button[type="button"]:hover{
 
 
 .divclass{
-    width: 200px;
-    height: 200px;
+    width: fit-content;
+    height: fit-content;
     background-color: rgb(134, 155, 40);
+    padding: 3%;
     border-radius: 20px;
     display: flex;
     flex-direction: column;

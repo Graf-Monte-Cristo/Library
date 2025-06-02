@@ -107,17 +107,37 @@ function displaybook(title, author, pages, checkbox){
     authors.textContent = author; 
     const page = document.createElement("p");
     page.textContent = pages + " pages"; 
-    const check = document.createElement("p");
+    const check = document.createElement("button");
+    const remove = document.createElement("button");
+    remove.textContent = "Remove";
     checkbox ?
     check.textContent = "Read":
     check.textContent = "Not read";
+    check.classList.add("read", "container-button");
+    remove.classList.add("remove", "container-button");
+
+
+    check.addEventListener("click", () => {
+        if(check.textContent === "Read"){
+            check.textContent = "Not read";
+        } else {
+            check.textContent = "Read";
+        }
+    })
+
+
     div.appendChild(titles);
     div.appendChild(authors);
     div.appendChild(page);
     div.appendChild(check);
+    div.appendChild(remove);
     container.appendChild(div);
+    remove.addEventListener("click", () => {
+        div.remove();
+    })
     addBookToLibrary(title, author, pages, checkbox);
     saveBooks();
 
 }
+
 
