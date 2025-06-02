@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📖 Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- main page -->
+
+    <!-- this block for making whole page darker and set opacity -->
+    <div class="whole hidden"></div>
+
+    <div class="header">
+        <h1>Your personal Library</h1>
+        <img src="library-outline.svg" alt="" class="icon-header">
+    </div>
+
+    <div class="addbook">
+        <h2 class="add">Add Book</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus" class="icon add">
+            <path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z" />
+        </svg>
+    </div>
+
+    <!-- containe where all books will be added -->
+    <div class="container"></div>
+    
+    <!-- popup block where user will fill his book -->
+    <div id="popup" class="hidden">
+        <h3>Add new book</h3>
+        <form id="form">
+            <input type="text" placeholder="title" name="title">
+            <input type="text" placeholder="author" name="author">
+            <input type="number" placeholder="pages" name="pages">
+            <label id="check">Have you read it? <input type="checkbox" name="checkbox">
+            </label>
+            <button type="submit" form="form">Save</button>
+            <button type="button" id="cancel">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>
