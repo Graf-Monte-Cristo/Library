@@ -10,9 +10,6 @@
 <body>
     <!-- main page -->
 
-    <!-- this block for making whole page darker and set opacity -->
-    <div class="whole hidden"></div>
-
     <div class="header">
         <h1>Your personal Library</h1>
         <img src="library-outline.svg" alt="" class="icon-header">
@@ -31,17 +28,19 @@
     <div class="container"></div>
     
     <!-- popup block where user will fill his book -->
-    <div id="popup" class="hidden">
+     <dialog id="dialog">
         <h3>Add new book</h3>
-        <form id="form">
-            <input type="text" placeholder="title" name="title" required>
+        <form id="form" method="dialog">
+            <input type="text" placeholder="title" name="title" required autofocus>
             <input type="text" placeholder="author" name="author" required>
             <input type="number" placeholder="pages" name="pages" required>
             <label id="check">Have you read it? <input type="checkbox" name="checkbox">
             </label>
-            <button type="submit" form="form">Save</button>
-            <button type="button" id="cancel">Cancel</button>
-        </form>
-    </div>
+            <div>
+                <button type="submit" form="form" id="submit" >Save</button>
+                <button type="button" id="cancel" formmethod="dialog">Cancel</button>
+            </div>
+        </form>  
+     </dialog>
 </body>
 </html>
